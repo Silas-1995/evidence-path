@@ -6,8 +6,6 @@
 
 Evidence Path helps coding agents investigate engineering bugs, integration blockers, and library choices. It establishes local versions and constraints, inspects upstream code and release evidence, then recommends or implements a small applicable change according to the user's request.
 
-Independently maintained derivative of [PavedPath Code by Jia-Ethan](https://github.com/Jia-Ethan/pavedpath-code). Original MIT attribution is preserved in [LICENSE](LICENSE); the reviewed revision and changes are documented in [NOTICE](NOTICE.md).
-
 ## Changes from the original
 
 - A 54-line entrypoint with detailed guidance loaded only when relevant.
@@ -78,4 +76,4 @@ python -m unittest discover -s tests -v
 
 [CI](https://github.com/Silas-1995/evidence-path/actions/workflows/validate.yml) checks metadata, local documentation links, examples, and report invariants on Windows and Linux. [Behavioral scenarios](evals/scenarios.md) support manual or separately authorized agent evaluation; they are not automated behavior benchmarks.
 
-MIT licensed. See [LICENSE](LICENSE) and [NOTICE](NOTICE.md).
+MIT licensed. See [LICENSE](LICENSE).

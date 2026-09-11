@@ -8,8 +8,6 @@
 
 Evidence Path 是一套面向编码智能体的工程排错与开源方案研究 skill。它先读取本地代码、实际依赖版本和约束，再检查 upstream issue、PR、源码、测试及发布记录；确认方案适用后，按你的要求交付建议，或继续完成改动与验证。
 
-基于 [Jia-Ethan / PavedPath Code](https://github.com/Jia-Ethan/pavedpath-code) 改造，独立维护，保留原作者 MIT 许可。来源版本及改写范围见 [NOTICE](NOTICE.md)。
-
 ## 用在什么地方
 
 - **排错**：依赖升级、运行时报错、构建失败、框架或 SDK 集成卡点。
@@ -110,4 +108,4 @@ python -m unittest discover -s tests -v
 
 ## 许可
 
-MIT。保留 Jia-Ethan 的原始版权声明，新贡献同样使用 MIT。详见 [LICENSE](LICENSE) 和 [NOTICE](NOTICE.md)。
+MIT。详见 [LICENSE](LICENSE)。
