@@ -1,0 +1,6 @@
+interface:
+  display_name: "Evidence Path"
+  short_description: "Find applicable open-source fixes and verify them"
+  default_prompt: "Use $evidence-path to investigate this engineering problem, check upstream evidence against my versions, and deliver the smallest local change within my requested scope."
+policy:
+  allow_implicit_invocation: true

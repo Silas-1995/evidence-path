@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "problem": "SYNTHETIC FIXTURE: demo-parser 2.4.0 on Python 3.11 loses the last record when the input lacks a trailing newline. Research only; keep Python 3.11.",
+  "mode": "research",
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "pr",
+      "url": "https://example.com/demo-parser/pull/17",
+      "status": "inspected",
+      "applicability": "matches",
+      "claim": "Fixture PR adds an end-of-input flush and a missing-newline regression test.",
+      "note": "Synthetic source, not a real upstream finding. Fixture targets Python 3.11; merge alone does not prove publication.",
+      "checked_on": "2026-09-11"
+    },
+    {
+      "id": "E2",
+      "kind": "package",
+      "url": "https://example.com/demo-parser/packages/2.4.1",
+      "status": "inspected",
+      "applicability": "matches",
+      "claim": "Fixture artifact 2.4.1 contains the flush and supports Python 3.11.",
+      "note": "Synthetic package inspection for illustrating the report contract only.",
+      "checked_on": "2026-09-11"
+    }
+  ],
+  "decision": {
+    "summary": "In this synthetic case, recommend testing demo-parser 2.4.1 against the missing-newline reproduction. No files changed.",
+    "basis": "upstream",
+    "evidence_ids": ["E1", "E2"],
+    "availability": {
+      "status": "released",
+      "version": "2.4.1",
+      "evidence_ids": ["E2"]
+    }
+  },
+  "verification": [
+    {
+      "check": "Parse two records without a final newline on Python 3.11; expect both records and unchanged behavior with a trailing newline.",
+      "status": "not-run",
+      "detail": "Research-only fixture. No package was installed and no runtime check was executed."
+    }
+  ],
+  "outcome": "recommended",
+  "limitations": ["All package names, URLs, and findings in this fixture are synthetic; this is not a real recommendation."]
+}
